@@ -211,20 +211,12 @@ body {
   text-align: center;
 }
 .img-container img {
-  display: none;
-}
-@media (min-width: 650px) {
-  .img-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-  }
-  .img-container img {
-    display: block;
-    width: fit-content;
-    height: 600px;
-  }
+  width: 100%;
+  min-width: 100px;
+  max-width: 450px;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
 @media (min-width: 1050px) {
   .displayonlyonphone {
@@ -238,7 +230,6 @@ body {
 .ratings {
   display: flex;
   gap: 12px;
-
   overflow-x: auto;
   padding: 8px;
   scroll-snap-type: x mandatory;
@@ -296,7 +287,6 @@ a {
   background-color: #f5b400;
   font-size: 13px;
   padding: 10px;
-  width: 100%;
   text-align: center;
   border-radius: 5px;
   color: var(--text-color);
@@ -332,7 +322,7 @@ a {
   }
 }
 .note {
-  padding: 10px;
+  padding: 10px 10px 30px 10px;
 }
 .note-container h2 {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -365,4 +355,156 @@ a {
   height: auto;
   object-fit: cover;
   display: block;
+}
+/* starts here */
+.highlight {
+  height: 300px;
+  background-color: var(--main-color);
+}
+.portfoliocontainer {
+  padding: 10px;
+}
+.portfoliocontainer h6 {
+  text-align: center;
+  padding: 20px 0px;
+}
+.portfoliocontainer h2 {
+  padding-bottom: 20px;
+  text-align: center;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.portfolio-box {
+  width: 100%;
+  margin-bottom: 30px;
+  display: block;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.portfolio-box h2 {
+  padding-top: 10px;
+  text-align: left;
+}
+.portfolio-box img {
+  width: 100%;
+  min-width: 100px;
+  max-width: 450px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+.portfolio-box p {
+  padding-bottom: 10px;
+}
+.portfolio-box a {
+  font-size: 13px;
+  background-color: transparent;
+  color: var(--main-color);
+}
+@media (min-width: 900px) {
+  .portfolio-box {
+    width: 80%;
+    margin: 0 auto 30px;
+
+    display: flex;
+    flex-direction: row; /* ← THIS is missing */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .portfolio-box img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .portfolio-box .content {
+    width: 55%;
+  }
+}
+.tech-example {
+  padding: 30px 10px;
+  background-color: black;
+  color: var(--second-bg-color);
+}
+.tech-example h2 {
+  padding: 10px 0px;
+  font-size: 35px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.tech-example h4 {
+  padding: 10px 0px;
+  color: var(--text-secondary);
+}
+.tech-example p {
+  padding: 10px 0px;
+}
+/* i will check it out later*/
+.show-bullets {
+  list-style: disc;
+  padding: 10px;
+}
+.show-bullets li {
+  padding: 10px;
+}
+@media (min-width: 800px) {
+  .tech-example {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.hang span {
+  text-align: center;
+  align-items: center;
+  font-size: 8px;
+}
+.hangcontainer {
+  border-bottom: 1px solid var(--text-secondary);
+}
+.equitize-a {
+  color: var(--main-color);
+  font-size: 13px;
+}
+.tech-example-learnmore {
+  display: block;
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: 13px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--bg-color);
+}
+.waytoinvest {
+  padding: 30px 10px;
+  background-color: var(--bg-color);
+}
+.waytoinvest h4 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  padding: 10px;
+}
+.waytoinvestcontain {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.waytoinvestcontain {
+  padding: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.waytoinvestcontain p {
+  padding: 15px 0px;
+}
+.waytoinvestcontain a {
+  color: var(--main-color);
+  font-size: 13px;
+}
+@media (min-width: 800px) {
+  .waytoinvest-flex {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
