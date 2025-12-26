@@ -105,14 +105,24 @@ body {
   background-color: var(--second-bg-color);
   padding: 30px 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-
   min-width: 500px;
   z-index: 100;
 }
 .dropdown-menu ul {
   display: block;
 }
-
+.dropdownonlargescreen img {
+  width: 100px;
+  height: 60px;
+}
+.dropdownonlargescreen {
+  background-color: rgb(206, 203, 203);
+  padding: 10px;
+}
+.navonlargescreen .dropdownonlargescreen-a {
+  color: var(--main-color);
+  font-size: 13px;
+}
 .dropdown-menu li {
   margin-bottom: 10px;
 }
@@ -153,16 +163,110 @@ body {
   display: none;
   overflow-y: auto;
   margin-top: -2%;
-  padding: 20px;
   transition: right 0.3s ease;
   z-index: 99;
+  padding-bottom: 80px;
 }
 @media (min-width: 1050px) {
   #side-menu {
-    display: none;
+    display: none !important;
   }
 }
-
+.side-menulogo {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+.side-menulogo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+.menudownloadlink {
+  display: block;
+  background-color: black;
+  border: 1px solid white;
+  font-size: 13px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+.menu-auth-button {
+  text-align: center;
+  padding: 20px 0px;
+  border-top: 1px solid var(--text-secondary);
+  border-bottom: 1px solid var(--text-secondary);
+}
+.menu-auth-button a {
+  border: 1px solid black;
+  padding: 10px 40px;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 13px;
+  color: black;
+}
+.menulistcontainer-li {
+  padding: 10px 0px;
+  border-bottom: 1px solid var(--main-color);
+}
+.menulistcontainer-li a {
+  font-size: 13px;
+}
+.menulistcontainer-li a:hover {
+  color: black;
+}
+.menulistcontainer-li summary {
+  padding-left: 10px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+.menulistcontainer-li summary:hover {
+  color: black;
+}
+.menulistcontainer-li span {
+  float: right;
+  padding-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.sidemenudropdown {
+  padding: 20px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.sidemenudropdown-li ul li {
+  color: var(--text-secondary);
+  padding: 20px 10px 10px 10px;
+}
+.sidemenudropdown-li ul li a {
+  color: var(--text-color);
+  padding: 10px;
+}
+.sidemenudropdown-li li a:hover {
+  color: black;
+}
+.menudropdownimgcontainer {
+  background-color: rgb(206, 203, 203);
+}
+.menudropdownimg {
+  display: flex;
+}
+.menudropdownimgcontainer img {
+  width: 100%;
+  min-width: 50px;
+  max-width: 300px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+.menudropdownimg a {
+  color: var(--main-color);
+}
 /* main section */
 
 .mainsection {
@@ -408,7 +512,6 @@ a {
   .portfolio-box {
     width: 80%;
     margin: 0 auto 30px;
-
     display: flex;
     flex-direction: row; /* ← THIS is missing */
     align-items: center;
@@ -442,7 +545,7 @@ a {
   padding: 10px 0px;
 }
 /* i will check it out later*/
-.show-bullets {
+.show-bullets ul {
   list-style: disc;
   padding: 10px;
 }
